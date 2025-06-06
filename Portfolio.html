@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Developer Portfolio">
+    <meta name="author" content="Alfred">
+    <title>Alfred's Portfolio</title>
+    <link rel="stylesheet" href="styles for course.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Alfred's Portfolio</h1>
+        <button class="menu-button" aria-label="Toggle navigation">☰</button>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>I am a passionate programmer and storyteller, blending technical precision with creative expression. I specialize in C#, JavaScript, and web development, continuously refining my skills in debugging, modular programming, and design patterns.</p>
+        </section>
+
+       <section id="projects">
+    <h2>Projects</h2>
+    <select onchange="filterProjects(this.value)">
+        <option value="all">All</option>
+        <option value="web">Web Development</option>
+        <option value="csharp">C# Projects</option>
+    </select>
+
+    <div class="project-container">
+        <article class="project-card" data-category="csharp">
+            <h3>Library Management System</h3>
+            <figure>
+                <img src="library-project.png" alt="Library Management System" onclick="openLightbox(this.src)">
+                <figcaption>A C# application with borrowing limits, search functionality, and book check-in features.</figcaption>
+            </figure>
+        </article>
+
+        <article class="project-card" data-category="web">
+            <h3>Interactive Web Elements</h3>
+            <figure>
+                <img src="web-elements.png" alt="Interactive Web Elements" onclick="openLightbox(this.src)">
+                <figcaption>JavaScript-powered dynamic UI, including API-fetching components and seamless asynchronous operations.</figcaption>
+            </figure>
+        </article>
+    </div>
+</section>
+
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>C# Development</li>
+                <li>Web Development (HTML, CSS, JavaScript)</li>
+                <li>Debugging & Error Handling</li>
+                <li>Design Patterns (Singleton, Observer)</li>
+                <li>Storytelling & Scripting for Digital Content</li>
+                <li></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="lightbox">
+        <img src="" alt="Project Preview">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Alfred. All rights reserved.</p>
+    </footer>
+</body>
+</html>
